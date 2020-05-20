@@ -1,8 +1,9 @@
 """管理员视图"""
 from core import src
 from interface import admin_interface
+from lib import common
 
-user_info = {
+admin_info = {
     "username": None
 }
 
@@ -46,20 +47,23 @@ def login():
         if flag:
             print(msg)
             # 记录当前操作
-            user_info["username"] = username
+            admin_info["username"] = username
             break
         else:
             print(msg)
 
 
+@common.auth("admin")
 def create_school():
     pass
 
 
+@common.auth("admin")
 def create_couse():
     pass
 
 
+@common.auth("admin")
 def create_teacher():
     pass
 

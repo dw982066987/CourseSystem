@@ -1,5 +1,10 @@
 """学员视图"""
 from core import src
+from lib import common
+
+student_info = {
+    "username": None
+}
 
 
 def logout():
@@ -19,14 +24,17 @@ def login():
     pass
 
 
+@common.auth("student")
 def choice_school():
     pass
 
 
+@common.auth("student")
 def choice_course():
     pass
 
 
+@common.auth("student")
 def check_score():
     pass
 
