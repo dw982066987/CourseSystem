@@ -2,6 +2,10 @@
 from core import src
 from interface import admin_interface
 
+user_info = {
+    "username": None
+}
+
 
 def logout():
     print("谢谢使用".center(50, "="))
@@ -33,7 +37,19 @@ def register():
 
 
 def login():
-    pass
+    while True:
+        username = input("请输入用户名：").strip()
+        password = input("请输入密码：").strip()
+        flag, msg = admin_interface.admin_login_interface(
+            username, password
+        )
+        if flag:
+            print(msg)
+            # 记录当前操作
+            user_info["username"] = username
+            break
+        else:
+            print(msg)
 
 
 def create_school():
