@@ -1,5 +1,6 @@
 """管理员视图"""
 from core import src
+from interface import admin_interface
 
 
 def logout():
@@ -12,7 +13,23 @@ def back_index():
 
 
 def register():
-    pass
+    while True:
+        username = input("请输入用户名：").strip()
+        password = input("请输入密码：").strip()
+        re_password = input("请确认密码：").strip()
+
+        if re_password == password:
+            # 调用管理员接口层
+            flag, msg = admin_interface.admin_register_interface(
+                username, password
+            )
+            if flag:
+                print(msg)
+                break
+            else:
+                print(msg)
+        else:
+            print("输入的密码不一致，请重新输入！")
 
 
 def login():
