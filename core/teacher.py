@@ -3,7 +3,7 @@ from core import src
 from lib import common
 
 teacher_info = {
-    "username": None
+    "user": None
 }
 
 

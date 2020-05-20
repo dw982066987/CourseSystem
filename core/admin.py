@@ -4,7 +4,7 @@ from interface import admin_interface
 from lib import common
 
 admin_info = {
-    "username": None
+    "user": None
 }
 
 
@@ -47,7 +47,7 @@ def login():
         if flag:
             print(msg)
             # 记录当前操作
-            admin_info["username"] = username
+            admin_info["user"] = username
             break
         else:
             print(msg)
@@ -55,11 +55,20 @@ def login():
 
 @common.auth("admin")
 def create_school():
-    pass
+    while True:
+        school_name = input("请输入要创建的学校名字：").strip()
+        school_addr = input("请输入要创建的学校地址：").strip()
+        flag, msg = admin_interface.create_school_interface(
+            school_name, school_addr, admin_info.get("user")
+        )
+        if flag:
+            print(msg)
+        else:
+            print(msg)
 
 
 @common.auth("admin")
-def create_couse():
+def create_course():
     pass
 
 
@@ -73,7 +82,7 @@ func_dict = {
     "1": register,
     "2": login,
     "3": create_school,
-    "4": create_couse,
+    "4": create_course,
     "5": create_teacher,
     "6": back_index
 }

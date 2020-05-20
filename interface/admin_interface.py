@@ -26,3 +26,15 @@ def admin_login_interface(username, password):
         return True, "登陆成功！"
     else:
         return False, "密码错误，请重新输入！"
+
+
+# 创建学校接口
+def create_school_interface(school_name, school_addr, admin_name):
+    school_obj = models.School.select(school_name)
+    if school_obj:
+        return False, "学校已存在，请重新注册！"
+    admin_obj = models.Admin.select(admin_name)
+    admin_obj.create_school(
+        school_name, school_addr
+    )
+    return True, "学校创建成功！"

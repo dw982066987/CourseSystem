@@ -2,14 +2,7 @@
 from db import db_handler
 
 
-# 管理员类
-class Admin:
-    # 调用类的时候触发
-    def __init__(self, username, password):
-        # 给当前对象赋值
-        self.username = username
-        self.password = password
-
+class Base:
     # 查看数据
     @classmethod
     def select(cls, username):
@@ -22,9 +15,31 @@ class Admin:
         db_handler.save_data(self)
 
 
+# 管理员类
+class Admin(Base):
+    # 调用类的时候触发
+    def __init__(self, username, password):
+        # 给当前对象赋值
+        self.username = username
+        self.password = password
+
+    def create_school(self,school_name, school_addr):
+        school_obj = School(school_name, school_addr)
+        school_obj.save()
+
+    def create_course(self):
+        pass
+
+    def create_teacher(self):
+        pass
+
+
 # 学校类
-class School:
-    pass
+class School(Base):
+    def __init__(self, name, addr):
+        self.username = name
+        self.addr = addr
+        self.course_list = []
 
 
 # 学员类
