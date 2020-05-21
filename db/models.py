@@ -36,8 +36,10 @@ class Admin(Base):
         # 更新学校数据
         school_obj.save()
 
-    def create_teacher(self):
-        pass
+    def create_teacher(self, teacher_name, teacher_pwd):
+        # 调用老师类，实例化得到老师对象
+        teacher_obj = Teacher(teacher_name, teacher_pwd)
+        teacher_obj.save()
 
 
 # 学校类
@@ -61,5 +63,8 @@ class Course(Base):
 
 
 # 讲师类
-class Teacher:
-    pass
+class Teacher(Base):
+    def __init__(self, teacher_name, teacher_pwd):
+        self.username = teacher_name
+        self.password = teacher_pwd
+        self.course_list_from_teacher = []

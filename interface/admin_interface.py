@@ -50,8 +50,19 @@ def create_course_interface(school_name, course_name, admin_name):
         return False, "当前课程已存在！"
     # 若课程不存在则由管理员创建课程
     admin_obj = models.Admin.select(admin_name)
-    admin_obj.create_course(
-        school_obj, course_name
-    )
+    admin_obj.create_course(school_obj, course_name)
 
     return True, f"{course_name}创建成功，绑定给{school_name}"
+
+
+# 创建教师接口
+def create_teacher_interface(teacher_name, admin_name, teacher_pwd="123"):
+    # 判断老师是否存在
+    teacher_obj = models.Teacher.select(teacher_name)
+    # 若存在，则返回不能创建
+    if teacher_obj:
+        return False, "老师已存在！"
+    # 若不存在，则让管理员创建
+    admin_obj = models.Admin.select(admin_name)
+    admin_obj.create_teacher(teacher_name, teacher_pwd)
+    return True, f"{teacher_name}，创建成功！"

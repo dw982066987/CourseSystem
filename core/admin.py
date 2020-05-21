@@ -34,6 +34,7 @@ def register():
                 break
             else:
                 print(msg)
+                continue
         else:
             print("输入的密码不一致，请重新输入！")
 
@@ -52,6 +53,7 @@ def login():
             break
         else:
             print(msg)
+            continue
 
 
 @common.auth("admin")
@@ -64,8 +66,10 @@ def create_school():
         )
         if flag:
             print(msg)
+            break
         else:
             print(msg)
+            continue
 
 
 @common.auth("admin")
@@ -101,13 +105,26 @@ def create_course():
         )
         if flag:
             print(msg)
+            break
         else:
             print(msg)
+            continue
 
 
 @common.auth("admin")
 def create_teacher():
-    pass
+    while True:
+        teacher_name = input("请输入老师的名字：").strip()
+        # 调用接口创建老师
+        flag, msg = admin_interface.create_teacher_interface(
+            teacher_name, admin_info.get("user")
+        )
+        if flag:
+            print(msg)
+            break
+        else:
+            print(msg)
+            continue
 
 
 func_dict = {
