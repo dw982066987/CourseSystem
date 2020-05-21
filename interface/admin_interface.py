@@ -38,3 +38,20 @@ def create_school_interface(school_name, school_addr, admin_name):
         school_name, school_addr
     )
     return True, "学校创建成功！"
+
+
+# 创建课程接口
+def create_course_interface(school_name, course_name, admin_name):
+    # 查看课程是否存在
+    # 先获取学校对象中的课程列表
+    school_obj = models.School.select(school_name)
+    # 判断当前课程是否存在课程列表中
+    if course_name in school_obj.course_list:
+        return False, "当前课程已存在！"
+    # 若课程不存在则由管理员创建课程
+    admin_obj = models.Admin.select(admin_name)
+    admin_obj.create_course(
+        school_obj, course_name
+    )
+
+    return True, f"{course_name}创建成功，绑定给{school_name}"

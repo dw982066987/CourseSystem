@@ -1,6 +1,7 @@
 """管理员视图"""
 from core import src
 from interface import admin_interface
+from interface import common_interface
 from lib import common
 
 admin_info = {
@@ -69,7 +70,39 @@ def create_school():
 
 @common.auth("admin")
 def create_course():
-    pass
+    while True:
+        # 调用接口获取学校名称
+        flag, msg = common_interface.get_all_school_interface()
+        if not flag:
+            print(msg)
+            break
+        for index, school_name in enumerate(msg):
+            print(f"编号{index},学校名称{school_name}")
+        choice = input("请输入学校编号：")
+        if not choice.isdigit():
+            print("请输入数字！")
+            continue
+        choice = int(choice)
+
+        if choice not in range(len(msg)):
+            print("请输入正确编号！")
+            continue
+
+        # 获取选择后的学校名字
+        school_name = msg[choice]
+
+        # 选择课程名称
+        course_name = input("请输入需要创建的课程名称：").strip()
+
+        # 调用接口层
+        flag, msg = admin_interface.create_course_interface(
+            # 关联学校和课程
+            school_name, course_name, admin_info.get("user")
+        )
+        if flag:
+            print(msg)
+        else:
+            print(msg)
 
 
 @common.auth("admin")
@@ -97,8 +130,8 @@ def admin_view():
                      1、注册
                      2、登录
                      3、创建学校
-                     4、创建老师
-                     5、创建课程
+                     4、创建课程
+                     5、创建老师
                      6、返回主页
         """)
         print("=" * 53)
