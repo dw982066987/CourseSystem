@@ -29,5 +29,9 @@ def auth(role):
                     teacher.login()
             else:
                 print("当前视图没有权限！")
+
         return inner
+
     return login_auth
+
+#

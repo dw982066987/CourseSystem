@@ -26,9 +26,7 @@ def register():
 
         if re_password == password:
             # 调用管理员接口层
-            flag, msg = admin_interface.admin_register_interface(
-                username, password
-            )
+            flag, msg = admin_interface.admin_register_interface(username, password)
             if flag:
                 print(msg)
                 break
@@ -43,9 +41,8 @@ def login():
     while True:
         username = input("请输入用户名：").strip()
         password = input("请输入密码：").strip()
-        flag, msg = admin_interface.admin_login_interface(
-            username, password
-        )
+        # flag, msg = admin_interface.admin_login_interface(username, password)
+        flag, msg = admin_interface.common_interface.login_interface(username, password, user_type="admin")
         if flag:
             print(msg)
             # 记录当前操作

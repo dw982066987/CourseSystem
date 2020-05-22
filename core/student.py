@@ -2,6 +2,7 @@
 from core import src
 from lib import common
 from interface import student_interface
+from interface import common_interface
 
 student_info = {
     "user": None
@@ -34,7 +35,18 @@ def register():
 
 
 def login():
-    pass
+    while True:
+        username = input("请输入用户名：").strip()
+        password = input("请输入密码：").strip()
+        # flag, msg = student_interface.student_login_interface(username,password)
+        flag, msg = common_interface.login_interface(username, password, user_type="student")
+        if flag:
+            print(msg)
+            student_info["user"] = username
+            break
+        else:
+            print(msg)
+            continue
 
 
 @common.auth("student")

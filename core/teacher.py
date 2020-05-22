@@ -1,6 +1,7 @@
 """老师视图"""
 from core import src
 from lib import common
+from interface import common_interface
 
 teacher_info = {
     "user": None
@@ -17,7 +18,15 @@ def back_index():
 
 
 def login():
-    pass
+    while True:
+        username = input("请输入用户名:").strip()
+        password = input("请输入密码:").strip()
+        flag, msg = common_interface.login_interface(username, password, )
+        if flag:
+            teacher_info["user"] = username
+            print(msg)
+        else:
+            print(msg)
 
 
 @common.auth("teacher")
