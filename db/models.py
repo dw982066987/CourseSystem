@@ -67,6 +67,17 @@ class Student(Base):
         self.school = school_name
         self.save()
 
+    def add_course(self, course_name):
+        # 学生课程列表添加课程
+        self.course_list.append(course_name)
+        # 设置默认分数
+        self.score[course_name] = 0
+        self.save()
+        # 学生选择的课程对象，添加学生
+        course_obj = Course.select(course_name)
+        course_obj.student_list.append(self.username)
+        course_obj.save()
+
 
 # 课程类
 class Course(Base):

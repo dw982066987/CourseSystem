@@ -79,7 +79,32 @@ def choice_school():
 
 @common.auth("student")
 def choice_course():
-    pass
+    while True:
+        # 获取当前学生所在学校的课程列表
+        flag, msg = student_interface.get_course_list_interface(student_info.get("user"))
+        # 让学生选择课程
+        if not flag:
+            print(msg)
+            break
+        for index, course_name in enumerate(msg):
+            print(f"编号为{index},课程名{course_name}")
+        choice = input("请输入课程编号：").strip()
+        if not choice.isdigit():
+            print("输入有误！")
+            continue
+        choice = int(choice)
+        if choice not in range(len(msg)):
+            print("请输入正确编号！")
+            continue
+        course_name = msg[choice]
+        #  调用选择课程接口
+        flag, msg = student_interface.add_course_interface(course_name, student_info.get("user"))
+        if flag:
+            print(msg)
+            break
+        else:
+            print(msg)
+            break
 
 
 @common.auth("student")
