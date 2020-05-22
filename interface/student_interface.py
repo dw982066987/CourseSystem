@@ -53,3 +53,9 @@ def add_course_interface(course_name, student_name):
     # 调用学生对象中添加课程的方法
     student_obj.add_course(course_name)
     return True, f"{course_name}课程添加成功"
+
+
+def check_course_interface(student_name):
+    student_obj = models.Student.select(student_name)
+    if student_obj.score:
+        return student_obj.score

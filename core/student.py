@@ -109,7 +109,10 @@ def choice_course():
 
 @common.auth("student")
 def check_score():
-    pass
+    score = student_interface.check_course_interface(student_info.get("user"))
+    if not score:
+        print("没有选择课程！")
+    print(score)
 
 
 func_dict = {
