@@ -51,8 +51,13 @@ class School(Base):
 
 
 # 学员类
-class Student:
-    pass
+class Student(Base):
+    def __init__(self, username, password):
+        self.username = username
+        self.password = password
+        self.course_list = []
+        self.score = {}  # {"course_name":0}
+        self.payed = {}  # {"course_payed:False}
 
 
 # 课程类

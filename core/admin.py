@@ -36,7 +36,7 @@ def register():
                 print(msg)
                 continue
         else:
-            print("输入的密码不一致，请重新输入！")
+            print("用户名或密码错误，请重新输入！")
 
 
 def login():

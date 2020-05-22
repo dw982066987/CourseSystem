@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="926e99be-f7eb-4de9-823a-927f831f1f25" name="Default Changelist" comment="" />
+    <list default="true" id="926e99be-f7eb-4de9-823a-927f831f1f25" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -10,7 +12,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/CourseSystem$src.coverage" NAME="src Coverage Results" MODIFIED="1589888651899" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core" />
-    <SUITE FILE_PATH="coverage/CourseSystem$start.coverage" NAME="start Coverage Results" MODIFIED="1590043658375" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/CourseSystem$start.coverage" NAME="start Coverage Results" MODIFIED="1590117793822" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FavoritesManager">
     <favorites_list name="CourseSystem" />
@@ -20,8 +22,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/admin.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="36" column="24" selection-start-line="36" selection-start-column="24" selection-end-line="36" selection-end-column="24" />
+            <state relative-caret-position="-10">
+              <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
               <folding>
                 <element signature="e#12#32#0" expanded="true" />
               </folding>
@@ -30,10 +32,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/interface/admin_interface.py">
+        <entry file="file://$PROJECT_DIR$/core/student.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="215">
-              <caret line="58" column="74" lean-forward="true" selection-start-line="58" selection-start-column="74" selection-end-line="58" selection-end-column="74" />
+            <state relative-caret-position="199">
+              <caret line="25" column="50" selection-start-line="25" selection-start-column="49" selection-end-line="25" selection-end-column="56" />
+              <folding>
+                <element signature="e#11#31#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -41,8 +46,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/db/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="42" selection-start-line="42" selection-end-line="42" />
+            <state relative-caret-position="324">
+              <caret line="59" column="47" selection-start-line="59" selection-start-column="47" selection-end-line="59" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/interface/student_interface.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="220">
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
             </state>
           </provider>
         </entry>
@@ -66,7 +80,7 @@
     </dirStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/core" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -74,7 +88,6 @@
         <option value="$PROJECT_DIR$/lib/common.ipynb" />
         <option value="$PROJECT_DIR$/core/core.py" />
         <option value="$PROJECT_DIR$/ReadMe.md" />
-        <option value="$PROJECT_DIR$/interface/student_interface.py" />
         <option value="$PROJECT_DIR$/interface/teacher_interface.py" />
         <option value="$PROJECT_DIR$/start.py" />
         <option value="$PROJECT_DIR$/core/src.py" />
@@ -82,11 +95,12 @@
         <option value="$PROJECT_DIR$/db/db_handler.py" />
         <option value="$PROJECT_DIR$/lib/common.py" />
         <option value="$PROJECT_DIR$/core/teacher.py" />
-        <option value="$PROJECT_DIR$/core/student.py" />
         <option value="$PROJECT_DIR$/interface/common_interface.py" />
-        <option value="$PROJECT_DIR$/core/admin.py" />
-        <option value="$PROJECT_DIR$/db/models.py" />
         <option value="$PROJECT_DIR$/interface/admin_interface.py" />
+        <option value="$PROJECT_DIR$/core/admin.py" />
+        <option value="$PROJECT_DIR$/core/student.py" />
+        <option value="$PROJECT_DIR$/interface/student_interface.py" />
+        <option value="$PROJECT_DIR$/db/models.py" />
       </list>
     </option>
   </component>
@@ -125,6 +139,12 @@
               <item name="CourseSystem" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
               <item name="db" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="CourseSystem" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="db" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="Student" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
               <item name="CourseSystem" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
@@ -259,23 +279,23 @@
       <workItem from="1589948132179" duration="4532000" />
       <workItem from="1589962015507" duration="3760000" />
       <workItem from="1589991242970" duration="1266000" />
-      <workItem from="1590032952301" duration="9309000" />
+      <workItem from="1590032952301" duration="9907000" />
+      <workItem from="1590115050832" duration="2265000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36619000" />
+    <option name="totallyTimeSpent" value="39482000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="25" width="1849" height="830" extended-state="6" />
-    <editor active="true" />
+    <frame x="67" y="25" width="866" height="818" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.82246375" visible="true" weight="0.09415042" />
-      <window_info id="Structure" order="1" sideWeight="0.17753623" side_tool="true" visible="true" weight="0.09415042" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8181818" visible="true" weight="0.29310346" />
+      <window_info id="Structure" order="1" sideWeight="0.18181819" side_tool="true" visible="true" weight="0.29310346" />
       <window_info id="Favorites" order="2" sideWeight="0.5021552" side_tool="true" weight="0.30904523" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.19416058" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.6077266" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39940387" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -318,9 +338,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/interface/student_interface.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/start.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
@@ -334,16 +351,6 @@
           <caret line="1" selection-start-line="1" selection-end-line="1" />
           <folding>
             <element signature="e#12#34#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/student.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-88">
-          <caret line="5" column="9" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
-          <folding>
-            <element signature="e#11#31#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -385,10 +392,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/interface/admin_interface.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="371">
+          <caret line="58" column="74" selection-start-line="58" selection-start-column="74" selection-end-line="58" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/core/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="36" column="24" selection-start-line="36" selection-start-column="24" selection-end-line="36" selection-end-column="24" />
+        <state relative-caret-position="-10">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
           <folding>
             <element signature="e#12#32#0" expanded="true" />
           </folding>
@@ -397,15 +411,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/db/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="42" selection-start-line="42" selection-end-line="42" />
+        <state relative-caret-position="324">
+          <caret line="59" column="47" selection-start-line="59" selection-start-column="47" selection-end-line="59" selection-end-column="47" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/interface/admin_interface.py">
+    <entry file="file://$PROJECT_DIR$/interface/student_interface.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="58" column="74" lean-forward="true" selection-start-line="58" selection-start-column="74" selection-end-line="58" selection-end-column="74" />
+        <state relative-caret-position="220">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/student.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="25" column="50" selection-start-line="25" selection-start-column="49" selection-end-line="25" selection-end-column="56" />
+          <folding>
+            <element signature="e#11#31#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

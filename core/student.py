@@ -1,6 +1,7 @@
 """学员视图"""
 from core import src
 from lib import common
+from interface import student_interface
 
 student_info = {
     "user": None
@@ -17,7 +18,19 @@ def back_index():
 
 
 def register():
-    pass
+    while True:
+        username = input("请输入用户名：").strip()
+        password = input("请输入密码：").strip()
+        re_password = input("请确认密码：").strip()
+        if re_password == password:
+            flag, msg = student_interface.student_register_interface(username, password)
+            if flag:
+                print(msg)
+                break
+            else:
+                print(msg)
+        else:
+            print("用户名或密码错误，请重新输入！")
 
 
 def login():
