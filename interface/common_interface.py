@@ -37,3 +37,12 @@ def login_interface(username, password, user_type):
     else:
         return False, "用户名不存在，请重新输入"
 
+
+def get_course_in_school_interface(school_name):
+    # 获取学校对象
+    school_obj = models.School.select(school_name)
+    # 获取学校课程
+    course_list = school_obj.course_list
+    if not course_list:
+        return False, "该学校没有课程！"
+    return True, course_list

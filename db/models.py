@@ -92,3 +92,10 @@ class Teacher(Base):
         self.username = teacher_name
         self.password = teacher_pwd
         self.course_list_from_teacher = []
+
+    def show_course(self):
+        return self.course_list_from_teacher
+
+    def add_course(self, course_name):
+        self.course_list_from_teacher.append(course_name)
+        self.save()
