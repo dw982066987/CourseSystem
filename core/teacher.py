@@ -2,6 +2,7 @@
 from core import src
 from lib import common
 from interface import common_interface
+from interface import teacher_interface
 
 teacher_info = {
     "user": None
@@ -21,17 +22,23 @@ def login():
     while True:
         username = input("请输入用户名:").strip()
         password = input("请输入密码:").strip()
-        flag, msg = common_interface.login_interface(username, password, )
+        flag, msg = common_interface.login_interface(username, password, user_type="teacher")
         if flag:
             teacher_info["user"] = username
             print(msg)
+            break
         else:
             print(msg)
+            break
 
 
 @common.auth("teacher")
 def check_course():
-    pass
+    flag, msg = teacher_interface.check_course_list_interface(teacher_info.get("user"))
+    if flag:
+        print(msg)
+    else:
+        print(msg)
 
 
 @common.auth("teacher")

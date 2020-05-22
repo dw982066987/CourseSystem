@@ -32,9 +32,10 @@ def register():
                 break
             else:
                 print(msg)
-                continue
+                break
         else:
             print("用户名或密码错误，请重新输入！")
+            continue
 
 
 def login():
@@ -121,7 +122,7 @@ def create_teacher():
             break
         else:
             print(msg)
-            continue
+            break
 
 
 func_dict = {

@@ -111,7 +111,7 @@ def choice_course():
 def check_score():
     score = student_interface.check_course_interface(student_info.get("user"))
     if not score:
-        print("没有选择课程！")
+        print("没有选择则课程！")
     print(score)
 
 
