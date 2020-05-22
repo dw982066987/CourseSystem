@@ -99,3 +99,7 @@ class Teacher(Base):
     def add_course(self, course_name):
         self.course_list_from_teacher.append(course_name)
         self.save()
+
+    def get_student(self, course_name):
+        course_obj = Course.select(course_name)
+        return course_obj.student_list

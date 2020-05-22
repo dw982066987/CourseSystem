@@ -92,7 +92,33 @@ def choose_course():
 
 @common.auth("teacher")
 def check_stu_from_course():
-    pass
+    while True:
+        # 调用获取当前老师下所有的课程接口
+        flag, course_list = teacher_interface.check_course_list_interface(teacher_info.get("user"))
+        if not flag:
+            print(course_list)
+            break
+        # 打印所有课程，并让老师选择
+        for index, course_name in enumerate(course_list):
+            print(f"编号{index},学校名{course_name}")
+        choice = input("请输入选择课程编号：").strip()
+        if not choice.isdigit():
+            print("输入有误！")
+            continue
+        choice = int(choice)
+        if choice not in range(len(course_list)):
+            print("输入的编号有误！")
+            continue
+        # 获取选择的课程名称
+        course_name = course_list[choice]
+        # 获取当前课程的学生
+        flag2, student_list = teacher_interface.get_student_interface(course_name, teacher_info.get("user"))
+        if flag2:
+            print(student_list)
+            break
+        else:
+            print(student_list)
+            break
 
 
 @common.auth("teacher")

@@ -12,7 +12,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/CourseSystem$src.coverage" NAME="src Coverage Results" MODIFIED="1589888651899" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core" />
-    <SUITE FILE_PATH="coverage/CourseSystem$start.coverage" NAME="start Coverage Results" MODIFIED="1590157908100" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/CourseSystem$start.coverage" NAME="start Coverage Results" MODIFIED="1590162310800" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FavoritesManager">
     <favorites_list name="CourseSystem" />
@@ -20,22 +20,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/interface/teacher_interface.py">
+        <entry file="file://$PROJECT_DIR$/core/teacher.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
-              <caret line="20" column="39" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="54" />
+            <state relative-caret-position="321">
+              <caret line="114" column="100" selection-start-line="114" selection-start-column="100" selection-end-line="114" selection-end-column="100" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/db_handler.py">
+        <entry file="file://$PROJECT_DIR$/interface/teacher_interface.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-44">
-              <caret line="30" selection-start-line="30" selection-end-line="30" />
-              <folding>
-                <element signature="e#16#25#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="415">
+              <caret line="32" column="38" selection-start-line="32" selection-start-column="38" selection-end-line="32" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -43,20 +40,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/db/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="93" column="42" lean-forward="true" selection-start-line="93" selection-start-column="42" selection-end-line="93" selection-end-column="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/teacher.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="388">
-              <caret line="90" lean-forward="true" selection-start-line="90" selection-end-line="90" />
-              <folding>
-                <element signature="e#11#31#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="475">
+              <caret line="103" column="46" selection-start-line="103" selection-start-column="46" selection-end-line="103" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -72,6 +57,10 @@
     </option>
   </component>
   <component name="FindInProjectRecents">
+    <findStrings>
+      <find>(choice)</find>
+      <find>choice</find>
+    </findStrings>
     <replaceStrings>
       <replace />
     </replaceStrings>
@@ -128,11 +117,6 @@
             <path>
               <item name="CourseSystem" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="conf" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="CourseSystem" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
               <item name="core" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
@@ -143,12 +127,26 @@
             <path>
               <item name="CourseSystem" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="interface" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="db" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="Course" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
               <item name="CourseSystem" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="lib" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="db" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="School" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="CourseSystem" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="db" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="Student" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="CourseSystem" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="db" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="Teacher" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
@@ -269,22 +267,23 @@
       <workItem from="1589991242970" duration="1266000" />
       <workItem from="1590032952301" duration="9907000" />
       <workItem from="1590115050832" duration="8757000" />
-      <workItem from="1590132486254" duration="12339000" />
+      <workItem from="1590132486254" duration="15801000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58313000" />
+    <option name="totallyTimeSpent" value="61775000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="850" height="818" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.61244017" visible="true" weight="0.25502512" />
-      <window_info id="Structure" order="1" sideWeight="0.3875598" side_tool="true" visible="true" weight="0.25502512" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8187221" visible="true" weight="0.25502512" />
+      <window_info id="Structure" order="1" sideWeight="0.18127786" side_tool="true" visible="true" weight="0.25502512" />
       <window_info id="Favorites" order="2" sideWeight="0.5021552" side_tool="true" weight="0.30904523" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.6894502" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.31352153" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39940387" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -435,16 +434,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/teacher.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="90" lean-forward="true" selection-start-line="90" selection-end-line="90" />
-          <folding>
-            <element signature="e#11#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db/db_handler.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-44">
@@ -457,15 +446,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/interface/teacher_interface.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="20" column="39" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="54" />
+        <state relative-caret-position="415">
+          <caret line="32" column="38" selection-start-line="32" selection-start-column="38" selection-end-line="32" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/teacher.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="114" column="100" selection-start-line="114" selection-start-column="100" selection-end-line="114" selection-end-column="100" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/db/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="93" column="42" lean-forward="true" selection-start-line="93" selection-start-column="42" selection-end-line="93" selection-end-column="42" />
+        <state relative-caret-position="475">
+          <caret line="103" column="46" selection-start-line="103" selection-start-column="46" selection-end-line="103" selection-end-column="46" />
         </state>
       </provider>
     </entry>
