@@ -46,12 +46,35 @@ def login():
             break
         else:
             print(msg)
-            continue
+            break
 
 
 @common.auth("student")
 def choice_school():
-    pass
+    while True:
+        # 获取所有学校
+        flag, msg = common_interface.get_all_school_interface()
+        if not flag:
+            print(msg)
+            break
+        for index, school_name in enumerate(msg):
+            print(f"编号{index},学校名{school_name}")
+        choice = input("请输入学校编号:").strip()
+        if not choice.isdigit():
+            print("请输入数字编号!")
+            continue
+        choice = int(choice)
+        if choice not in range(len(msg)):
+            print("输入有误!")
+            continue
+        school_name = msg[choice]
+        flag, msg = student_interface.add_school_interface(school_name, student_info.get("user"))
+        if flag:
+            print(msg)
+            break
+        else:
+            print(msg)
+            break
 
 
 @common.auth("student")

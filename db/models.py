@@ -55,9 +55,17 @@ class Student(Base):
     def __init__(self, username, password):
         self.username = username
         self.password = password
+        # 每个学生只能有一个校区
+        self.school = None
+        # 一个学生可以选择多门课程
         self.course_list = []
+        # 学生课程分数
         self.score = {}  # {"course_name":0}
         self.payed = {}  # {"course_payed:False}
+
+    def add_school(self, school_name):
+        self.school = school_name
+        self.save()
 
 
 # 课程类
